@@ -1,5 +1,5 @@
 html, body{
-	font-family: 'DejaVu', sans-serif;
+    font-family: Dejavu Sans;
     margin: 0;
     padding: 0; 
     color: #1E1E20;
@@ -23,7 +23,7 @@ margin: 5% 0%;
 
 /*--------------------------------------------------------------------------------*/
 nav{
-	font-family: 'Verdana';
+	font-family: Verdana,Geneva,sans-serif;
 	position: fixed;
 	z-index: 2;
 	padding: 1.5% 10% 0;
