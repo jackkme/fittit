@@ -1,0 +1,159 @@
+html, body{
+	font-family: 'DejaVu', sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: #1E1E20;
+    background: #FFF;
+    min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+a{text-decoration: none; outline: 0;}
+
+h1{	font-size: 180%;}
+
+hr{
+height: 10px;
+background: #3498DB;
+border: 0px solid;
+border-bottom: 3px solid #2980B9;
+margin: 5% 0%;
+}
+
+/*--------------------------------------------------------------------------------*/
+nav{
+	font-family: 'Verdana';
+	position: fixed;
+	z-index: 2;
+	padding: 1.5% 10% 0;
+	width: 80%;
+	top: 0;
+	background: #1E1E20;
+}
+nav a{
+	color: #F8F8F8;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+li{
+	display: inline-block;
+	text-align: center;
+	font-size: 2em;
+	border-bottom: 5px solid transparent;
+	padding: 0.5% 0 0;
+	width: 24%;
+}
+
+li:hover{
+	border-bottom: 5px solid #F8F8F8;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	-webkit-transition: background-color 0.2s;
+}
+
+/*---------------------------------------------------------------------*/
+#sticky{
+	background: #F8F8F8;
+	width: 20%;
+	position: fixed;
+	display: inline-block;
+	margin: 0px 0px 0px 1.5%;
+	height: 75%;
+	top: 15%;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0 1%;
+}
+
+.sticky-input{
+}
+
+input[type="number"]{
+	width: 50px;
+}
+input[type="submit"]{
+	background: #3498DB;
+	border: 0px;
+	border-bottom: 3px solid #2980B9;
+	color: #F8F8F8; 
+	height: 6%;
+	min-height: 35px;
+	width: 100%;
+}
+
+#stickyMini{
+	background: #F8F8F8;
+	width: 20%;
+	position: fixed;
+	display: inline-block;
+	margin: 0px 0px 0px 1.5%;
+	height: 4%;
+	top: 92.5%;
+	padding: 1% 1% 0%;
+}
+
+main{
+	width: 70%;
+	min-height: 190%;
+	position: absolute;
+	display: flex;
+	flex-flow: row wrap;
+	top: 15%;
+	right: 0px;
+	margin: 0 5%;
+}
+article{
+	background: #F8F8F8;
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	margin: 2% auto auto auto;
+	padding: 0 1% 2%;
+}
+
+.result{
+margin: 2% 0px 0px 2%;
+}
+.result-span{
+font-weight: bold;
+}
+
+#piechart{
+	width: 100%;
+	height: 320px;
+	
+}
+
+/*---------------------------------------------------------------------*/
+@media(min-width: 2250px) {
+
+}
+
+@media(max-width: 995px) {
+
+}
+
+ @media(max-width: 530px) {
+
+
+}
+
+@media(max-width: 500px) {
+	nav{
+		padding: 2% 0px 0px 0px;
+		font-size: 10px;
+		width: 100%; 
+	}
+}
+
+@media(max-width: 480px) {
+
+ }
+
