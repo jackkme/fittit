@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -21,7 +21,7 @@
 	<meta name="twitter:image" content="" />
 
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
-	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Fittit calculator</title>
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -42,7 +42,7 @@
 			<li><a data-scroll data-options='{ "easing": "linear" }' href="#bodyfat">BFP</a></li>
 			<li><a data-scroll data-options='{ "easing": "linear" }' href="#TotalDailyEE">TDEE</a></li>
 			<li><a data-scroll data-options='{ "easing": "linear" }' href="#macros">MACRO</a></li>
-			<li><a href="http://www.reddit.com/r/Fitness/"><img src="http://d.thumbs.redditmedia.com/pC9xYVRl8EoM7IH-.png"></a></li>
+			<li><a href="http://www.reddit.com/r/Fitness/"><img src="http://d.thumbs.redditmedia.com/pC9xYVRl8EoM7IH-.png" alt="/r/fitness"></a></li>
 		</ul>
 	</nav>
 	<script src='js/smooth-scroll.js'></script>
@@ -59,7 +59,7 @@
 	<form id="formStats" name="formStats">
 	<div id="sticky">
 		
-		<h1>Please enter your stats</h1>
+		<h2>Please enter your stats</h2>
 		<fieldset class="sticky-input">
 			<legend>System:</legend>
 			<input type="radio" name="system" value="metric" id="metric" checked="checked"/><label for="metric">Metric</label>
@@ -106,16 +106,17 @@
 	<main role="main">
 		
 		<article role="article" id="bodyfat">
-			<h1>Body fat percentage - navy method</h1>
+			<h2>Body fat percentage - navy method</h2>
 			
 		</article>
 
 		<article role="article" id="TotalDailyEE">
-			<h1>TDEE - Total Daily Energy Expenditure</h1>	
+			<h2>TDEE - Total Daily Energy Expenditure</h2>	
 			
 			<form id="formTdee" name="formTdee" onSubmit="formSubmit(this); event.preventDefault();">
 			<label for="activity" id="exercise">Exercise:</label>
 			<select name="activity" id="activity" required>
+				<option value="">Select activity level</option>
 				<option value="1.0">Basal Metabolic Rate</option>
 				<option value="1.2">Sedentary/No exercise</option>
 				<option value="1.375">3x week</option>
@@ -148,7 +149,7 @@
 		</article>
 		
 		<article role="article" id="macros">
-			<h1>Macros - Programm</h1>
+			<h2>Macros - Programm</h2>
 			<form id="formMacros" name="formMacros" onSubmit="formSubmit(this); event.preventDefault();">
 				<input type="radio" name="macro" value="normal" id="normal" /><label for="normal">Normal</label>
 				<input type="radio" name="macro" value="textbook" id="textbook" /><label for="textbook">Textbook</label>
@@ -171,8 +172,11 @@
 		</article>
 	</main>
 
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load('visualization','1.1', {'packages':['corechart']});
+	</script>
  	<script type="text/javascript" src="js/script.js"></script>
- 	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
 	<script type="text/javascript" src="js/tdee.js"></script>
 	<script type="text/javascript" src="js/macros.js"></script>
  
