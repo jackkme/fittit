@@ -60,40 +60,39 @@
 	<div id="sticky">
 		
 		<h1>Please enter your stats</h1>
-		<div class="sticky-input">
-			<b>System:</b><br/>
+		<fieldset class="sticky-input">
+			<legend>System:</legend>
 			<input type="radio" name="system" value="metric" id="metric" checked="checked"/><label for="metric">Metric</label>
 			<input type="radio" name="system" value="imperial" id="imperial" /><label for="imperial">Imperial</label>
-		</div>		
-		<div class="sticky-input">
-			<b>Gender:</b><br/>
+		</fieldset>		
+		<fieldset class="sticky-input">
+			<legend>Gender:</legend>
 			<input type="radio" name="gender" value="female" id="female"/><label for="female">Female</label>
 			<input type="radio" name="gender" value="male" id="male" checked="checked"/><label for="male">Male</label>
-		</div>
-		<div class="sticky-input">
-			<b>Age:</b>
+		</fieldset>
+		<fieldset class="sticky-input">
+			<legend>Age:</legend>
 			<input type="number" id="age" name="age" value="30" min="0" max="116" autofocus="autofocus"/>
 			<label for="age">years</label>
-		</div>
-		<div class="sticky-input metric">
-			<b>Weight:</b>
+		</fieldset>
+		<fieldset class="sticky-input metric">
+			<legend>Weight:</legend>
 			<input type="number" id="kilo" name="kilo" value="80" min="0" max="450" step="any"/><label for="kilo">kg</label>
-		</div>
-		<div class="sticky-input metric">
-			<b>Height:</b>
+		</fieldset>
+		<fieldset class="sticky-input metric">
+			<legend>Height:</legend>
 			<input type="number" id="centi" name="centi" value="180" min="0" max="300" step="any" /><label for="centi">cm</label>
-		</div>
+		</fieldset>
 		
-		<div class="sticky-input imperial">
-			<b>Weight:</b>
+		<fieldset class="sticky-input imperial">
+			<legend>Weight:</legend>
 			<input type="number" id="lbs" name="lbs" value="175" min="0" max="1000" step="any" /><label for="lbs">lbs</label>
-		</div>
-		<div class="sticky-input imperial">
-			<b>Height:</b>
+		</fieldset>
+		<fieldset class="sticky-input imperial">
+			<legend>Height:</legend>
 			<input type="number" id="foot" name="foot" value="5" min="0" max="10" /><label for="foot">ft</label>
 			<input type="number" id="inch" name="inch" value="11" min="0" max="12" /><label for="inch">in</label>
-		</div>
-		<br/>
+		</fieldset>
 	</div>
 	</form>
 
@@ -115,7 +114,7 @@
 			<h1>TDEE - Total Daily Energy Expenditure</h1>	
 			
 			<form id="formTdee" name="formTdee" onSubmit="formSubmit(this); event.preventDefault();">
-			<b id="exercise">Exercise:</b>
+			<label for="activity" id="exercise">Exercise:</label>
 			<select name="activity" id="activity" required>
 				<option value="1.0">Basal Metabolic Rate</option>
 				<option value="1.2">Sedentary/No exercise</option>
@@ -131,9 +130,12 @@
 			</select>
 			<p>*elavated Heartrate for 45+ minutes</p>
 			
-			<b>Formula:</b>
-			<input type="radio" name="formula" value="mifflin" id="mifflin" checked="checked" /><label for="mifflin">Mifflin-St Jeor</label>
-			<input type="radio" name="formula" value="katch" id="katch" /><label for="katch">Katch-McArdle </label><label for="bfp">- BFP:</label><input type="number" id="bfp" name="bfp" min="0" max="60" step="any" disabled="disabled" required>
+			<fieldset class="formula">
+				<legend>Formula:</legend>
+				<input type="radio" name="formula" value="mifflin" id="mifflin" checked="checked" /><label for="mifflin">Mifflin-St Jeor</label>
+				<input type="radio" name="formula" value="katch" id="katch" /><label for="katch">Katch-McArdle </label><label for="bfp">- BFP:</label>
+				<input type="number" id="bfp" name="bfp" min="0" max="60" step="any" disabled="disabled" required>
+			</fieldset>
 			<p><a href="http://en.wikipedia.org/wiki/Basal_metabolic_rate#BMR_estimation_formulas" target="_blank">More info</a></p>
 			
 			<input type="submit" value="Calculate TDEE!" />
