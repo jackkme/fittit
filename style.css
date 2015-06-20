@@ -128,7 +128,7 @@ label[for="tdeeMacro"] {
 
 main{
 	width: 70%;
-	min-height: 190%;
+	min-height: 218%;
 	position: absolute;
 	display: flex;
 	flex-flow: row wrap;
@@ -179,6 +179,12 @@ font-weight: bold;
 		width: 100%; 
 	}
 }
+
+@media(max-width: 480px) {
+
+ }
+
+
 
 @media(max-width: 480px) {
 
