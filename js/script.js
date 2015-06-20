@@ -18,12 +18,14 @@ function getUrlParameter(sParam)
 //Array of all ="name" (variable of the Attr)
 var names = [getUrlParameter('system'), getUrlParameter('gender'), getUrlParameter('age'), getUrlParameter('kilo'), getUrlParameter('centi'),
 			getUrlParameter('lbs'), getUrlParameter('foot'), getUrlParameter('inch'), getUrlParameter('activity'), getUrlParameter('formula'),
-			getUrlParameter('bfp')];
+			getUrlParameter('bfp'), getUrlParameter('neckin'), getUrlParameter('waistin'), getUrlParameter('hipin'), getUrlParameter('neckcm'),
+			getUrlParameter('waistcm'), getUrlParameter('hipcm')];
 //Array of all "name"= (Attr)
-var nameAttr = ["system", "gender", "age", "kilo", "centi", "lbs", "foot", "inch", "activity", "formula", "bfp"]
+var nameAttr = ["system", "gender", "age", "kilo", "centi", "lbs", "foot", "inch", "activity", "formula", "bfp", "neckin", 
+				"waistin", "hipin", "neckcm", "waistcm", "hipcm"]
 
 //When page loads, put the params in the inputs
-for(i=0; i<11; i++){
+for(i=0; i<17; i++){
 	if(names[i] != undefined){
 		//console.log(nameAttr[i] + ": " +names[i]);
 		//console.log($('#' + nameAttr[i]).val());
@@ -38,19 +40,36 @@ for(i=0; i<11; i++){
 if($("#formStats input[name=system]:checked").val() == "imperial"){
 	$('.metric').css("display", "none");
 	$('.imperial').css("display", "initial");
+	
 	$("#inch").prop('disabled', false);
 	$("#foot").prop('disabled', false);
 	$("#lbs").prop('disabled', false);
+	$("#neckin").prop('disabled', false);
+	$("#waistin").prop('disabled', false);
+	$("#hipin").prop('disabled', false);
+	
 	$("#centi").prop('disabled', true);
 	$("#kilo").prop('disabled', true);
+	$("#neckcm").prop('disabled', true);
+	$("#waistcm").prop('disabled', true);
+	$("#hipcm").prop('disabled', true);
+	
 } else {
 	$('.imperial').css("display", "none");
 	$('.metric').css("display", "initial");
+	
 	$("#inch").prop('disabled', true);
 	$("#foot").prop('disabled', true);
 	$("#lbs").prop('disabled', true);
+	$("#neckin").prop('disabled', true);
+	$("#waistin").prop('disabled', true);
+	$("#hipin").prop('disabled', true);
+	
 	$("#centi").prop('disabled', false);
 	$("#kilo").prop('disabled', false);
+	$("#neckcm").prop('disabled', false);
+	$("#waistcm").prop('disabled', false);
+	$("#hipcm").prop('disabled', false);
 }
 
 //change mifflin/katch
@@ -65,18 +84,33 @@ if( $("#formTdee input[name=formula]:checked").val() == "katch"){
 //change metric/imperial system		
 $('input:radio[name="system"]').change(
 function (){
-	if( $( this ).val() == "metric"){
-		$("#inch").prop('disabled', true);
-		$("#foot").prop('disabled', true);
-		$("#lbs").prop('disabled', true);
-		$("#centi").prop('disabled', false);
-		$("#kilo").prop('disabled', false);
-	} else {
+	if( $( this ).val() == "imperial"){
 		$("#inch").prop('disabled', false);
 		$("#foot").prop('disabled', false);
 		$("#lbs").prop('disabled', false);
+		$("#neckin").prop('disabled', false);
+		$("#waistin").prop('disabled', false);
+		$("#hipin").prop('disabled', false);
+		
 		$("#centi").prop('disabled', true);
 		$("#kilo").prop('disabled', true);
+		$("#neckcm").prop('disabled', true);
+		$("#waistcm").prop('disabled', true);
+		$("#hipcm").prop('disabled', true);
+	} else {
+		
+		$("#inch").prop('disabled', true);
+		$("#foot").prop('disabled', true);
+		$("#lbs").prop('disabled', true);
+		$("#neckin").prop('disabled', true);
+		$("#waistin").prop('disabled', true);
+		$("#hipin").prop('disabled', true);
+		
+		$("#centi").prop('disabled', false);
+		$("#kilo").prop('disabled', false);
+		$("#neckcm").prop('disabled', false);
+		$("#waistcm").prop('disabled', false);
+		$("#hipcm").prop('disabled', false);
 	}
     $('.imperial').toggle();
     $('.metric').toggle()
@@ -111,3 +145,6 @@ function(){
     //    }
     //});
 };
+
+
+
