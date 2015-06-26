@@ -109,20 +109,20 @@
 			<h2>Body fat percentage - navy method</h2>
 			<form id="formBFP" name="formBFP" onSubmit="formSubmit(this); event.preventDefault();">
 			<fieldset class="imperial">
-				<legend>Neck: </legend>
-				<input type="number" id="neckin" name="neckin" value="20" min="0" max="100" step="any"/><label for="neckin">inch</label>
-				<legend>Waist: </legend>
-				<input type="number" id="waistin" name="waistin" value="37.5" min="0" max="100" step="any"/><label for="waistin">inch</label>
-				<legend>Hip: </legend>
-				<input type="number" id="hipin" name="hipin" value="34.5" min="0" max="100" step="any"/><label for="hipin">inch</label>
+				<label for="neckin">Neck: </label>
+				<input type="number" id="neckin" name="neckin" value="20" min="0" max="100" step="any"/>inch<br/>
+				<label for="waistin">Waist: </label>
+				<input type="number" id="waistin" name="waistin" value="37.5" min="0" max="100" step="any"/>inch<br/>
+				<label for="hipin">Hip: </label>
+				<input type="number" id="hipin" name="hipin" value="34.5" min="0" max="100" step="any"/>inch<br/>
 			</fieldset>
 			<fieldset class="metric">
-				<legend>Neck: </legend>
-				<input type="number" id="neckcm" name="neckcm" value="50" min="0" max="100" step="any"/><label for="neckcm">cm</label>
-				<legend>Waist: </legend>
-				<input type="number" id="waistcm" name="waistcm" value="90" min="0" max="100" step="any"/><label for="waistcm">cm</label>
-				<legend>Hip: </legend>
-				<input type="number" id="hipcm" name="hipcm" value="90" min="0" max="100" step="any"/><label for="hipcm">cm</label>
+				<label for="neckcm">Neck: </label>
+				<input type="number" id="neckcm" name="neckcm" value="50" min="0" max="100" step="any"/>cm<br/>
+				<label for="waistcm">Waist: </label>
+				<input type="number" id="waistcm" name="waistcm" value="90" min="0" max="100" step="any"/>cm<br/>
+				<label for="hipcm">Hip: </label>
+				<input type="number" id="hipcm" name="hipcm" value="90" min="0" max="100" step="any"/>cm<br/>
 			</fieldset>
 			<br/><br/>
 			<input type="submit" value="Calculate BPF!" />
@@ -137,7 +137,7 @@
 			<form id="formTdee" name="formTdee" onSubmit="formSubmit(this); event.preventDefault();">
 			<label for="activity" id="exercise">Exercise:</label>
 			<select name="activity" id="activity" required>
-				<option value="1.0">Select activity level</option>
+				<option value="">Select activity level</option>
 				<option value="1.0">Basal Metabolic Rate</option>
 				<option value="1.2">Sedentary/No exercise</option>
 				<option value="1.375">3x week</option>
