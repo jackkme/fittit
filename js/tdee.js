@@ -28,7 +28,7 @@ else if($("#formTdee input[name=formula]:checked").val() == "mifflin")
 	/*Mifflin-St Jeor equation
 	  Man: BMR = [10 x weight(kg)] + [6.25 x height(cm)] - [5 x age(yrs)] + 5
 	  Woman: BMR = [10 x weight(kg)] + [6.25 x height(cm)] - [5 x age(yrs)] - 161*/
-	  if($("#formTdee input[name=formula]:checked").val() == "female")
+	  if($("#formStats input[name=gender]:checked").val() == "female")
 	  {
 		  bmr = (10 * kilo) + (6.25 * centi) - (5 * age) - 161;
 	  } else {

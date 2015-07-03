@@ -73,7 +73,9 @@ li:hover{
 }
 
 .sticky-input{
+	padding: 0.5em;
 }
+
 
 input[type="number"]{
 	width: 50px;
@@ -86,6 +88,31 @@ input[type="submit"]{
 	height: 6%;
 	min-height: 35px;
 	width: 100%;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+legend {
+	font-weight: bold;
+	*margin-left: -7px;
+	padding: 0;
+	white-space: normal;
+}
+.formula legend {
+	float: left;
+}
+
+label#exercise {
+	font-weight: bold;
+}
+
+label[for="tdeeMacro"] {
+	padding-top: 1em;
+	padding-right: 0.5em;
+	display: inline-block;
 }
 
 #stickyMini{
@@ -101,7 +128,7 @@ input[type="submit"]{
 
 main{
 	width: 70%;
-	min-height: 190%;
+	min-height: 218%;
 	position: absolute;
 	display: flex;
 	flex-flow: row wrap;
@@ -172,6 +199,12 @@ font-weight: bold;
 		width: 100%; 
 	}
 }
+
+@media(max-width: 480px) {
+
+ }
+
+
 
 @media(max-width: 480px) {
 
