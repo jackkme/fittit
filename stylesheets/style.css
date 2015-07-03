@@ -131,6 +131,26 @@ font-weight: bold;
 	
 }
 
+/*chart overrides*/
+
+.ct-series-a .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: #3498DB;
+  /* give your pie slices some outline or separate them visually by using the background color here */
+}
+
+.ct-series-b .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: #0e73b7;
+  /* give your pie slices some outline or separate them visually by using the background color here */
+}
+
+.ct-series-c .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: #7ac5f7;
+  /* give your pie slices some outline or separate them visually by using the background color here */
+}
+
 /*---------------------------------------------------------------------*/
 @media(min-width: 2250px) {
 
